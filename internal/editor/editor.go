@@ -1,4 +1,4 @@
-package main
+package editor
 
 import (
 	"bufio"
@@ -43,7 +43,8 @@ func printBanner() {
 	fmt.Print("satr (raw mode) - ctrl+q to exit\r\n")
 }
 
-func RunEditor() error {
+// Run starts the text editor loop.
+func Run() error {
 	termFd := int(os.Stdin.Fd())
 	restore, err := enterRawMode(termFd)
 

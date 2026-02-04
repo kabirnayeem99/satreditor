@@ -1,4 +1,4 @@
-package main
+package editor
 
 const (
 	CtrlQ  byte = 0x11

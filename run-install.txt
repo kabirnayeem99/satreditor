@@ -1,0 +1,23 @@
+------------------------------------------
+Running or installing satr
+------------------------------------------
+
+1. Quick run (needs a real terminal for raw mode):
+   - `make run`
+   - or `go run ./cmd/satr`
+
+2. Debug mode (requires delve: `go install github.com/go-delve/delve/cmd/dlv@latest`):
+   - `make debug`
+   - starts the editor under Delve with breakpoints/stepping
+
+3. Build without running:
+   - `make build` to produce `bin/satr`
+
+4. Install on macOS (adjust PREFIX if you want a different path):
+   - `make install`
+   - installs to `/usr/local/bin/satr`; `make uninstall` removes it
+
+5. Cleanup helpers:
+   - `make fmt` formats everything
+   - `make tidy` syncs go.mod/go.sum
+   - `make clean` removes the `bin/` directory
